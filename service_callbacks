@@ -1,0 +1,161 @@
+
+Login screen:
+
+HTTP GET: SERVICE:8080/login
+
+
+callbacks:
+
+HTTP GET: SERVICE:8080/login_call?username=[USERNAME]&password=[PASSWORD]
+
+returns a reply in JSON
+on success:
+
+{type:"OK",accessToken:[XXXXXXX]}
+
+on fail:
+
+{type:"FAIL",errorType:[USER_ERROR,PASSWORD_ERROR]}
+
+___________________________
+
+KANRI gamen - preferences 
+
+HTTP GET: SERVICE:8080/adminPanel
+
+
+callbacks:
+
+HTTP GET: SERVICE:8080/getPreferences
+
+on success:
+{dailyReportEmailAccounts:[ARRAY_OF_EMAIL_ADRESSES],
+regularReportEmailAccounts:[ARRAY_OF_EMAIL_ADRESSES],
+systemErrorNotificationEmailAccounts : [ARRAY_OF_EMAIL_ADRESSES]
+updatedTimestamp : UNIX_TIMESTAMP,
+dailyRunIntervalInMimutes: [XXX],
+regularReportIntervalInMinutes : [XXX]
+}
+
+on error: 
+return HTTP CODE 404 (not found)
+
+returns a reply in JSON
+HTTP POST: SERVICE:8080/setPreferences
+
+on success:
+{   dailyReportEmailAccounts:[ARRAY_OF_EMAIL_ADRESSES],
+    regularReportEmailAccounts:[ARRAY_OF_EMAIL_ADRESSES],
+    systemErrorNotificationEmailAccounts : [ARRAY_OF_EMAIL_ADRESSES]
+    updatedTimestamp : UNIX_TIMESTAMP
+    dailyRunIntervalInMimutes: [XXX],
+    regularReportIntervalInMinutes : [XXX]
+
+}
+
+on error: 
+return HTTP CODE 404 (not found)
+
+
+____________________________
+
+Filter editor:
+
+HTTP GET: SERVICE:8080/filterEditor
+
+
+callbacks:
+
+HTTP GET: SERVICE:8080/getFilter
+
+on success:
+
+{   filterType : DAILY/REGULAR
+    filterTimeSpanInMinutes : [X],
+    filter : { object that contains the database events and codes we are interested in }
+    filterEventTypes: [ Array containing some of these: 'device_registration','device_setting','data_transfering','device_statistics','app_setting']
+    filterEventContent: [ Array containing some of these: 'company_code','branch_code','device_code','status','error_info','device_type','device_nickname'
+      ,'serial_no','serial_date','action','value','app_version','def_file_version' ]
+    filterActionTypes: [ Array containing some of these: 'device_regist','device_set','datetime_update','device_delete','device_change_name',
+    'data_transfer','data_cloud_sync','serial_date_reset_detection','serial_date_overflow_detection','checksum_error_detection',
+    'app_update','definition_update']
+    filterErrors: [ Array containing some of these: 'info','warn','error','fatal']
+    
+    updatedTimestamp : UNIX_TIMESTAMP
+}
+
+on error: 
+return HTTP CODE 404 (not found)
+
+HTTP POST: SERVICE:8080/setFilter
+
+on success:
+{type:"OK",updatedTimestamp:[UNIX_TIMESTAMP]}
+
+on error: 
+return HTTP CODE 404 (not found)
+
+
+___________________________
+
+
+toiawase: background process control:
+
+HTTP GET: SERVICE:8080/backgroundProcessControl
+
+callbacks:
+
+HTTP GET: SERVICE:8080/getStatus
+
+on success:
+{type:"OK",updatedTimestamp:[UNIX_TIMESTAMP],statusObject:{}}
+
+on error: 
+return HTTP CODE 404 (not found)
+
+HTTP GET: SERVICE:8080/getErrorLog
+
+on success:
+{type:"OK",updatedTimestamp:[UNIX_TIMESTAMP],errorLog: [String that contains the error log] }
+
+on error: 
+return HTTP CODE 404 (not found)
+
+
+HTTP GET: SERVICE:8080/forceDailyReport
+
+on success:
+{type:"OK",updatedTimestamp:[UNIX_TIMESTAMP]}
+
+on error: 
+{type:"DAILY_REPORT_FAIL",timestamp:[UNIX_TIMESTAMP]}
+
+HTTP GET: SERVICE:8080/forceRegularReport
+
+on success:
+{type:"OK",updatedTimestamp:[UNIX_TIMESTAMP]}
+
+on error: 
+{type:"REGULAR_REPORT_FAIL",timestamp:[UNIX_TIMESTAMP]}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

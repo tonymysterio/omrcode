@@ -1,0 +1,118 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+
+  <!-- Basic Page Needs
+  –––––––––––––––––––––––––––––––––––––––––––––––––– -->
+  <meta charset="utf-8">
+  <title>Your page title here :)</title>
+  <meta name="description" content="">
+  <meta name="author" content="">
+
+  <!-- Mobile Specific Metas
+  –––––––––––––––––––––––––––––––––––––––––––––––––– -->
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+
+  <!-- FONT
+  –––––––––––––––––––––––––––––––––––––––––––––––––– -->
+  
+  <!-- CSS
+  –––––––––––––––––––––––––––––––––––––––––––––––––– -->
+  <link rel="stylesheet" href="css/normalize.css">
+  <link rel="stylesheet" href="css/skeleton.css">
+
+  <style>
+    #reportTableContainer { margin:0 auto; align-content: center; }
+    #reportTable { margin:0 auto; align-content: center; }
+    .filterSection {background-color: powderblue; margin-bottom: 0.5em; }
+    .filterSectionRow {
+      background-color: gray;
+    }
+  </style>
+
+  <!-- Favicon
+  –––––––––––––––––––––––––––––––––––––––––––––––––– -->
+  <link rel="icon" type="image/png" href="images/favicon.png">
+
+</head>
+<body>
+
+  <!-- Primary Page Layout
+  –––––––––––––––––––––––––––––––––––––––––––––––––– -->
+  <div class="container" id="container">
+        <div class="row">
+          <a href="settings">settings</a>
+          <a href="filter">filtering</a>
+          <a href="serviceStatus">service status</a>
+          <a href="logout">logout</a>
+          
+        </div>
+
+    
+      <!--div class="one-half column" style="margin-top: 5%">
+        <h4>filter Page</h4>
+        <p>please provide login details</p>
+      </div-->
+      
+      <div class="row">
+        <h4>device events with non-notify status</h4>
+
+        <button onclick="totalErrors()" class="button-primary" type="addRecipient" >level 1</button>
+        <button onclick="deviceErrors()" class="button-primary" type="addRecipient" >level 2</button>
+        
+        
+
+
+      </div>
+
+      
+
+      </div>
+    
+        <div id="reportTableContainer" class="row">
+            <table id="reportTable" class="row"></div>
+  
+
+    
+            </table>
+
+        </div>
+    <!--form id="login">
+      <div class="row">
+
+          <div class="row">
+              <label for="email">Your email</label>
+              <input class="u-full-width" id="email" type="email" placeholder="test@gmail.com" id="emailInput">
+            </div>
+          <div class="row">
+                <label for="password">Your password</label>
+                <input class="u-full-width" id="password" type="password" placeholder="******" id="passwordInput">
+              </div>
+          <div class="row">
+            <input class="button-primary" type="button" value="Submit" onclick="login()">
+          </div>
+
+    </form-->
+    
+    <!-- Always wrap checkbox and radio inputs in a label and use a <span class="label-body"> inside of it -->
+    
+    <!-- Note: The class .u-full-width is just a utility class shorthand for width: 100% -->
+
+
+
+  </div>
+
+<!-- End Document
+  –––––––––––––––––––––––––––––––––––––––––––––––––– -->
+</body>
+<script type="text/javascript" src="tablesort/tablesort.min.js" ></script>
+
+<script type="text/javascript" src="js/redom.min.js" ></script>
+<script type="text/javascript" src="uiJS/common.js" ></script>
+<!--script type="text/javascript" src="uiJS/filterEditor.js" ></script>
+
+<script type="text/javascript" src="uiJS/filterAdapter.js" ></script-->
+<script type="text/javascript" src="uiJS/grouper.js" ></script>
+<script type="text/javascript" src="uiJS/deviceAllExceptNotifications.js" ></script>
+
+</html>

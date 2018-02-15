@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+
+  <!-- Basic Page Needs
+  –––––––––––––––––––––––––––––––––––––––––––––––––– -->
+  <meta charset="utf-8">
+  <title>Your page title here :)</title>
+  <meta name="description" content="">
+  <meta name="author" content="">
+
+  <!-- Mobile Specific Metas
+  –––––––––––––––––––––––––––––––––––––––––––––––––– -->
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+
+  <!-- FONT
+  –––––––––––––––––––––––––––––––––––––––––––––––––– -->
+  <link href="//fonts.googleapis.com/css?family=Raleway:400,300,600" rel="stylesheet" type="text/css">
+
+  <!-- CSS
+  –––––––––––––––––––––––––––––––––––––––––––––––––– -->
+  <link rel="stylesheet" href="css/normalize.css">
+  <link rel="stylesheet" href="css/skeleton.css">
+
+  <!-- Favicon
+  –––––––––––––––––––––––––––––––––––––––––––––––––– -->
+  <link rel="icon" type="image/png" href="images/favicon.png">
+
+</head>
+<body>
+
+  <!-- Primary Page Layout
+  –––––––––––––––––––––––––––––––––––––––––––––––––– -->
+  <div class="container">
+      <div class="row">
+        <a href="settings">settings</a>
+        <a href="filter">filtering</a>
+        <a href="serviceStatus">service status</a>
+        <a href="logout">logout</a>
+    
+    
+          </div>
+
+    <div class="row">
+      <div class="one-half column" style="margin-top: 5%">
+        <h3>service status</h4>
+        <p></p>
+      </div>
+    </div>
+
+
+    <div>
+      <div class="row" id = "serviceStatus">
+        
+        <h5  >Daily report last run: <span id="dailyReportLastRun">[XXX]</span></h5>  
+        <h5  >Realtime report last run: <span id="realtimeReportLastRun">[XXX]</span></h5>  
+        <h5 >Error log last updated: <span id="errorLogUpdated" >[XXX]</span></h5>
+
+        <hr/>
+      </div>
+      <div class="row">
+          <h3>manual report request</h4>
+
+          <button onclick="requestDaily()" class="button-primary" type="addRecipient" >request daily report</button>
+          <button onclick="requestRealtime()" class="button-primary" type="addRecipient" >realtime report</button>
+          
+          
+
+
+        </div>
+
+      </div>
+    
+    <!-- Always wrap checkbox and radio inputs in a label and use a <span class="label-body"> inside of it -->
+    
+    <!-- Note: The class .u-full-width is just a utility class shorthand for width: 100% -->
+
+
+
+  </div>
+
+<!-- End Document
+  –––––––––––––––––––––––––––––––––––––––––––––––––– -->
+</body>
+
+<script type="text/javascript" src="js/redom.min.js" ></script>
+<script type="text/javascript" src="uiJS/common.js" ></script>
+<script type="text/javascript" src="uiJS/serviceStatus.js" ></script>
+
+</html>

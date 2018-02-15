@@ -1,0 +1,102 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+
+  <!-- Basic Page Needs
+  –––––––––––––––––––––––––––––––––––––––––––––––––– -->
+  <meta charset="utf-8">
+  <title>Your page title here :)</title>
+  <meta name="description" content="">
+  <meta name="author" content="">
+
+  <!-- Mobile Specific Metas
+  –––––––––––––––––––––––––––––––––––––––––––––––––– -->
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+
+  <!-- FONT
+  –––––––––––––––––––––––––––––––––––––––––––––––––– -->
+  <link href="//fonts.googleapis.com/css?family=Raleway:400,300,600" rel="stylesheet" type="text/css">
+
+  <!-- CSS
+  –––––––––––––––––––––––––––––––––––––––––––––––––– -->
+  <link rel="stylesheet" href="css/normalize.css">
+  <link rel="stylesheet" href="css/skeleton.css">
+
+  <!-- Favicon
+  –––––––––––––––––––––––––––––––––––––––––––––––––– -->
+  <link rel="icon" type="image/png" href="images/favicon.png">
+    <style>
+    .align-to-bottom {
+      display: table-cell;
+      vertical-align: bottom;
+      margin-top: 2em;
+    }
+    </style>
+
+</head>
+<body>
+
+  <!-- Primary Page Layout
+  –––––––––––––––––––––––––––––––––––––––––––––––––– -->
+  <div class="container">
+      <div class="row">
+        <a href="settings">settings</a>
+        <a href="filter">filtering</a>
+        <a href="serviceStatus">service status</a>
+        <a href="logout">logout</a>
+
+
+      </div>
+
+    <div class="row">
+      <div class="one-half column" style="margin-top: 5%">
+        <h4>background process settings</h4>
+        <p>please set email adresses for report recipients</p>
+      </div>
+    </div>
+
+    <div class="row">
+        
+      <div class="column">
+          <button onclick ="addRecipient()" class="button-primary" type="addRecipient" >add recipient</button>
+          
+        <hr />
+      </div>
+    </div>
+    
+    <div id ="listForm" >
+      
+
+
+
+
+
+
+
+          <div class="row">
+                <label for="submit">submit to save changes</label>
+                <button onclick ="saveSettings()" class="button-primary" type="addRecipient" >save</button>
+              </div>
+          <div class="row">
+            
+          </div>
+
+    </div>
+    
+    <!-- Always wrap checkbox and radio inputs in a label and use a <span class="label-body"> inside of it -->
+    
+    <!-- Note: The class .u-full-width is just a utility class shorthand for width: 100% -->
+
+
+
+  </div>
+
+<!-- End Document
+  –––––––––––––––––––––––––––––––––––––––––––––––––– -->
+</body>
+
+<script type="text/javascript" src="js/redom.min.js" ></script>
+<script type="text/javascript" src="uiJS/common.js" ></script>
+<script type="text/javascript" src="uiJS/settings.js" ></script>
+
+</html>

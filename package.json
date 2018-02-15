@@ -1,0 +1,17 @@
+{
+  "name": "bigqueryreport",
+  "version": "1.0.0",
+  "main": "filterBase.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "",
+  "license": "ISC",
+  "description": "",
+  "dependencies": {
+    "express": "^4.16.2",
+    "gmail-send": "^1.2.13",
+    "google-cloud": "^0.57.0",
+    "json2csv": "^3.11.5"
+  }
+}
